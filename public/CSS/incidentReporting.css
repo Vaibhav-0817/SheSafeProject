@@ -1,0 +1,220 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+body{
+    background-color: #82146c;
+}
+.wrapper{
+    margin:0 auto;
+    height: auto;
+    width: 100%;   
+}
+
+.hero-section{
+    align-items: center;
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    overflow-y: none;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.content{
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+
+.heading{
+    font-family: 'Georgia';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.right-form{
+    display:flex;
+    width: 45%;
+    flex-direction: column;
+    gap:1.3rem;
+    justify-content: center;
+}
+.left-form{
+    display:flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.3rem;
+}
+label{
+    font-size: 1.3rem;  
+
+}
+
+input{
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    /* height: 10%; */
+    font-size: 1rem;
+    height:2rem;
+}
+#yn
+{
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    /* height: 10%; */
+    font-size: 1rem;
+    height:2rem;
+    width: 12rem;
+}
+#map{
+    height: 222px;
+  }
+
+textarea{
+    background-color: #f2f2f2;
+    border: none;
+}
+.incident-description{
+    height:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timing-of-incident{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+
+.option{
+    display: flex;
+    gap: 2rem;
+}
+
+.option button{
+    height: 1.5rem;
+    width: 7rem;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.option button:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.injury-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:20%;
+    display: none;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.active .injury-description{
+    display: flex;
+    pointer-events: auto;
+}
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.active .photo{
+    opacity:1;
+    pointer-events: auto;
+}
+
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.submit button{
+    height: 2rem;
+    width: 10rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #82146c;
+    transition: 0.3s;
+    color: white;
+}
+
+.submit button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+@media (max-width: 780px) {
+    .wrapper{
+        height: auto;
+        overflow-y: scroll;
+    }
+    .hero-section{
+        display: flex;
+        height:auto;
+        flex-direction: column;
+        width: 95%;
+        margin-top: 2%;
+        margin-bottom:2%;
+        gap: 1rem;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+    }
+
+    .left-form{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-form{
+        width: 100%;
+        height: auto;
+    }
+
+    .submit{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

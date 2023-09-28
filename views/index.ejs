@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@500&family=Covered+By+Your+Grace&family=Dancing+Script:wght@400;500&family=Kalam&family=Pacifico&family=Signika:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/mainstyles.css">
+    <title>SheSafe</title>
+    <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a30b4c8810aa7d640e055f999b05556d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style> -->
+</head>
+<body>
+    <div id="wrapper">
+        <div id="home" >
+            <div id="nav">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="assets/sih-logo-img.png" alt="">
+                    </div>
+                    <h2 class="h2-head">SheSafe</h2>  
+                </div>
+                <div class="dropdown .icons-ham-links">
+                    <button onclick="myFunction()" class="dropbtn"><i class="dropbtn fa-solid fa-bars"></i></button>
+                <div class="pages-link dropdown-content" id="myDropdown">
+                  <div class="link"><a href="/index/incidentReporting" class="apna-a">Complaint</a></div>
+                  <div class="link"><a href="/index/volunteer" class="apna-a">Volunteer</a></div>
+                  <div class="link"><a href="/index/community" class="apna-a">Community</a></div>
+                  <div class="link"><a href="/index/virtualwalk" class="apna-a">Companion-walk</a></div>
+                  <div class="link"><a href="/logout" class="apna-a">Logout</a></div>
+                </div>
+                </div>
+                <div class="profile-image">
+                    <img src="assets/profile-img3.png" alt="">
+                </div>
+            </div>
+            <div id="hero-section">
+                <div id="emergency-section">
+                    <div class="virtual-walk-card">
+                        <h2>Companion-Walk</h2>
+                        <img src="assets/virtual-walk-iimage.png" alt="">
+                        <p>Get a virtual companion to walk along with you</p>
+                    </div>
+                    <button class="request-btn">Request Walk</button>
+                </div>
+                <div class="sos">
+                    <button type="submit" form="sosform" id="sosbtn" class="sos-btn">SOS</button>
+                </div> 
+                <form action="/index" method="post" id="sosform">
+                    <input type="hidden" id="latloc" name="latlocation" value="">
+                    <input type="hidden" id="lngloc" name="lnglocation" value="">
+                </form> 
+                <div id="map-section">
+                    <div class="about-map">
+                        <h3>See the red zones and black spots in your campus</h3>
+                        <div class="clock-container">
+                            <div class="digital-clock">
+                                <div id="time"></div>
+                            </div>
+                            <div id="danger-zone" class="danger-zone-text">Red Zone:</div>
+                        </div>
+                        
+                        <div class="danger-zone-input">
+                            <p id="dangerzonestart">15</p>
+                            <p id="dangerzoneend">18</p>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <!-- <a href="/index/mapblkspot" class="map-iitdhanbad"><button class="map-link">Go To Map</button></a> -->
+                        <iframe src="map.html" height="100%" width="100%"></iframe>
+                    </div>
+                </div>     
+                <div id="activity-section">
+                     <div class="recent-activity-card">
+                        <h2>Recent on Community</h2>
+                        <ul class="post">
+                            <li class="comment-box">
+                                <div class="user-info">
+                                <img src="assets/comment-user-img.png" alt="" class="comment-user-image user-1">
+
+                                <p class="comment-user-name">Shailja</p>
+                                </div>
+                                
+                                <p class="comment">I think our campus is becoming better day by day in women safety</p>
+                            </li>
+                            <li class="comment-box">
+                                <div class="user-info">
+                                    <img src="assets/comment-user-img.png" alt="" class="comment-user-image user-2">
+                                    <p class="comment-user-name">Anil</p>
+                                </div>
+                                <p class="comment">Good Initiative By the administration</p>
+                            </li>
+                            
+                        </ul>
+                     </div>
+                </div>   
+
+                <div id="profile-modal">
+                    <div class="user-img-name">
+                        <img src="assets/comment-user-img.png" alt="">
+                        <p><%=user.Name%></p>
+                        <i class="fa-solid fa-xmark xmark profile-closer"></i>
+                    </div>
+                    <div class="enrollment-info">
+                        <p>Enrollment-No:</p>
+                        <p><%= user.Enrollment %></p>
+                    </div>
+                    <div class="user-email">
+                        <p>Email:</p>
+                        <p><%= user.username %></p>
+                    </div>  
+                </div>
+                <div id="about-info">
+                    <p>"Empowering women begins with ensuring their safety. Join us in creating a campus where every woman can thrive without fear."</p>
+                </div>
+            </div>
+            <footer>
+                <p><i class="fa-regular fa-copyright"></i>SheSafe-2023</p>
+                <p>HelpLine No.- 9771432103</p>
+                <div class="footer-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="SheBot"
+      agent-id="2b89acd5-7d87-487c-8ca6-fdc8a3288708"
+      language-code="en"
+      chat-icon="assets/chatBot-icon.png"
+    ></df-messenger> 
+    <script src="JAVASCRIPT/redzone.js"></script>
+    <script src="JAVASCRIPT/index.js"></script>
+    <script src="JAVASCRIPT/profile.js"></script>
+    <script src="https://kit.fontawesome.com/7a8648ff6c.js" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheSafe</title>
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../CSS/community.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="tabcontainer">
+            <button class="student">Student community</button>
+            <button class="administration">Administration</button>
+        </div>
+        <div class="img-container">
+            <img src="../assets/student-community-removebg-preview.png" alt="">
+        </div>
+        <div class="tabPanel tp1">
+            <form action="/index/community/student" method="post">
+            <div class="comment-form">
+                <textarea  name="ucomm" style="width: 500%;" rows="4" placeholder="Enter your comment" required="true"></textarea>
+                <button type="submit" id="submit-button">Submit</button>
+            </div>
+        </form>
+            <div class="comment">
+               <%  slist.forEach((item)=>{ %>
+                <div class="full-comment"><p><%= item.review %></p><div class="username"><%= item.name %></div></div>
+             <%  }) %>
+            </div>
+        </div>
+        <div class="tabPanel tp2">
+         <form action="/index/community/admin" method="post">
+            <div class="comment-form">
+                <textarea  name="dcomm" style="width: 500%;" rows="4" placeholder="Enter your comment" required="true"></textarea>
+                <button type="submit" id="submit-button">Submit</button>
+            </div>
+         </form>
+            <div class="comment">
+                <%  alist.forEach((item)=>{ %>
+                <div class="full-comment"><p><%= item.review %></p><div class="username"><%= item.name %></div></div>
+                <%  }) %>
+            </div>
+        </div> 
+
+    </div>
+    <footer>
+    </footer>
+    <script src="../JAVASCRIPT/community.js"></script>
+</body>
+</html>

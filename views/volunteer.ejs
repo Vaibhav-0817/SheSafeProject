@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheSafe</title>
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../CSS/volunteerForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+        <div class="about-content-box">
+            <div class="registration-form">
+                <div class="main-div">
+                    <h1>Register Here</h1>
+                    <form action="/index/volunteer" method="post" id="volform" class="register-details">
+                           <div class="register-elements">
+                              <label for="Enrollment">What times are you available for volunteering?</label>
+                              <input type="text" id="Enrollment" required="true" name="time">
+                           </div>
+        
+                           <div class="register-elements interest">
+                              <label for="Branch">Areas or types of volunteer work you are interested in?</label>
+                              <input type="text" id="Branch" name="area" required="true" placeholder="e.g. event security,safety patrols,emergency response">
+                           </div>
+        
+                           <!-- <div class="register-elements decision">
+                              <div>Have you volunteered for campus safety initiatives or other organizations in the past?</div>
+                              <div class="decision-maker">
+                                 <label for="yes">Yes</label>
+                                 <input type="radio" id="yes" name="decision">
+                                 <label for="No">No</label>
+                                 <input type="radio" id="No" name="decision">
+                              </div>
+                           </div>
+        
+                           <div class="register-elements communications">
+                              <div>How would you prefer to receive communications about volunteering opportunities?</div>
+                              <div class="commn-inputs">
+                                 <label for="email">Email</label>
+                                 <input type="radio" id="email" name="communication">
+                                 <label for="phone">Phone</label>
+                                 <input type="radio" id="phone" name="communication">
+                                 <label for="Text-msg">Message</label>
+                                 <input type="radio" id="Text-msg" name="yn">
+                              </div>
+                           </div> -->
+        
+                           <div class="register-elements">
+                              <label for="emergency-no">Emergency Contact No:(FOR SOS EMERGENCY)</label>
+                              <input type="text" name="emergencyno" id="emergency-no" required="true">
+                           </div>
+                    </form>
+                    <div class="btn">
+                     <button type="submit" form="volform">SUBMIT</button>
+                    </div>
+                </div>
+        
+            </div>
+           <div class="about-image-content">
+               <img src="../assets/womens-image-home.png" alt="">
+           </div>                         
+        </div>
+    
+</body>
+</html>

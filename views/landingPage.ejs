@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Caveat:wght@500&family=Covered+By+Your+Grace&family=Dancing+Script:wght@400;500&family=Kalam&family=Pacifico&family=Signika:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="CSS/landingPage.css">
+    <title>SheSafe</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo">               
+                <img src="assets/sih-logo-img.png" alt="">
+                <h2>SheSafe</h2>  
+            </div>
+            <a href="/login" class="login-link"><button class="login-btn">LOGIN</button></a>
+        </div>
+        <div id="herosection">
+            <div class="content">
+                <div class="about-content">
+                    <img src="assets/womens-protection-img-removebg-preview.png" alt="">
+                    <P>We believe that every woman deserves a secure and inclusive environment for personal growth and empowerment. Here, you'll find innovative solutions, resources, and a community-driven approach to enhance women's safety.
+                     Together, we're creating a safer campus for all. Explore, engage, and join us in this vital mission.</P>
+                </div>
+                <div class="signup-form">
+                    <div class="login-heading">
+                        <h1>Sign Up</h1>
+                    </div>
+                    <form action="/register" method="post" class="login-details">
+                        
+                            <div class="login-element">
+                            <label for="Name">Name</label> 
+                            <input type="text" name="Name" id="Name" required="required">
+                            </div>
+        
+                            <div class="login-element">
+                            <label for="Enrollment">Enrollment-no</label> 
+                            <input type="text" name="Enrollment" id="Enrollment" required="required" placeholder="Faculty-id if faculty">
+                            </div>
+                            
+                            <!-- <div class="login-element">
+                            <label for="Branch" optio> Branch</label> 
+                            <input type="text" name="Branch" id="Branch" placeholder="optional for faculty">
+                            </div>
+                        --> 
+                        <div class="login-element">
+                            <label for="Login">User type:</label>
+                            <select name="profession" id="select-element" required="true">
+                            <option value="dean">Dean</option>
+                            <option value="faculty">Faculty</option>
+                            <option value="student">Student</option>
+                            <option id="none" value="none" selected disabled hidden > select an option</option>
+                            </select>
+                        </div>
+    
+                            <div class="login-element">
+                            <label for="Phone"> Phone no</label> 
+                            <input type="text" name="Phone" id="Phone" mode="numeric" placeholder="+91" required="required">
+                            </div>
+                            
+                            <div class="login-element">
+                            <label for="Email">Email(college)</label> 
+                            <input type="email" name="username" id="Email" required="required">
+                            </div>
+                            
+                            <div class="login-element">
+                            <label for="DateofBirth">Date of Birth</label> 
+                            <input type="date" name="password" id="DateofBirth" placeholder="DD/MM/YYYY" required="required">
+                            </div>
+                        
+                        <button type="submit" class="btn">SIGN UP</button>
+                    </form>   
+                </div>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

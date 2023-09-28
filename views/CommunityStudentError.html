@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+        }
+        body{
+            background-color: #c65ab0;
+        }
+        .information{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 55%;
+            height: 80%;
+            margin: 0 auto;
+        }
+        h2{
+            color:bisque;
+        }
+        button{
+            height: 2rem;
+            width: 10rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            background-color: bisque;
+        }
+        button:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        @media (max-width: 780px) {
+            img{
+                width: 70%;
+                height: 70%;
+            }
+
+            .information{
+                align-items: center;
+                text-align: center;
+                margin-top: 20%;
+                width: 100%;
+            }
+
+            h2{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="information">
+            <img src="assets/imageserr.jpg" alt="">
+            <h2> you are not authorised to post in this section </h2>
+            <a href="/index/community"> <button>Back to site</button> </a>
+        </div>
+    </div>
+</body>
+</html>
